@@ -1,5 +1,5 @@
 a = range(1, 100)
-b = [] 
+b = []
 num = int(input("Enter a number to see it's divisors: "))
 
 for i in a:

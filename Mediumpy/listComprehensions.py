@@ -1,12 +1,12 @@
 a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-b = [] 
+b = []
 
-for i in a:             
+for i in a:
     if i % 2 == 0:
         b.append(i)
 print(b)
 
-#Condensed the above code to a single line.
+# Condensed the above code to a single line.
 
 a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 b = [x for x in a if x % 2 == 0]
