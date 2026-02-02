@@ -5,6 +5,7 @@ from time import sleep
 yesOrNo = ["Yes", "No"]
 status = True 
 answer = random.randint(1,9)
+tally = 0
 
 os.system("clear")
 
@@ -17,7 +18,7 @@ while status:
                 break
             
             else:
-                print("The value must be between 1 - 9")
+                os.system("clear")
                 
         except ValueError:
             os.system("clear")
@@ -27,18 +28,26 @@ while status:
             
     if guess == answer:
         print("\nCongratulations that was correct")
-    
+        tally += 1
+        
+        
     elif guess < answer:
         print("\nThe guess is too low")
         sleep(1)
         os.system("clear")
+        tally += 1
+        
     elif guess > answer:
         print("\nThe guess was too high")
         sleep(1)
         os.system("clear")
+        tally += 1
     
     if guess == answer:
         sleep(1)
+        os.system("clear")
+        print("It took you", tally, "attempts to guess the number!\n\n")
+        sleep(2)
         os.system("clear")
         check = input("Would you like to play again? \n\t Yes|No\n\n\t  ").capitalize()
     
