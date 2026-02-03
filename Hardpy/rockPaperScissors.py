@@ -121,6 +121,8 @@ while status:
 
     while check not in yesOrNo:
         print("This input is invalid. Please try again.")
+        sleep(1)
+        os.system("clear")
         check = str(
             input("Would you like to play again? \n\t Yes|No\n\n\t  ")
         ).capitalize()
